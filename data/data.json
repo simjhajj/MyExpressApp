@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Salmon Cat Food",
+    "originalPrice": 29.99,
+    "discountedPrice": 24.99,
+    "description": "Delicious salmon-flavored dry food for cats. Save $5 today!",
+    "image": "salmon_cat_food.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Chewy Chicken Dog Treats",
+    "originalPrice": 14.99,
+    "discountedPrice": 9.99,
+    "description": "Irresistible chicken treats for dogs. Limited time offer!",
+    "image": "chicken_treats.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Pet Cozy Blanket",
+    "originalPrice": 39.99,
+    "discountedPrice": 29.99,
+    "description": "Keep your pets warm with this soft and cozy blanket. Save $10!",
+    "image": "pet_blanket.jpg"
+  }
+]

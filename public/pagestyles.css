@@ -1,0 +1,71 @@
+/* General page styling */
+body {
+  background-color: #f4f4f4;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Header and navigation styling */
+header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+header h1 {
+  font-size: 1.8em;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Data container and individual item styling */
+#dataContainer {
+  margin-top: 20px;
+}
+
+div {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

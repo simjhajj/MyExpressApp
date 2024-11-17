@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Specifies the character encoding for the document (UTF-8 is widely used). -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ensures the webpage is responsive by adjusting to the screen width of the device. -->
+  <title>Data Fetching Example</title>
+  <!-- The title of the webpage that appears in the browser tab. -->
+  <link rel="stylesheet" href="pagestyles.css">
+  <!-- Links an external CSS file for styling the webpage. -->
+</head>
+<body>
+  <!-- The main content of the webpage starts here. -->
+  <header>
+    <!-- Contains introductory content, branding, or navigation links. -->
+    <p class="heading">Purrfect Picks</p>
+    <!-- Displays the website's name or tagline. -->
+    <img src="images/catPNG.png" height="75px">
+    <!-- Displays a cat-themed logo, sized to 75px in height. -->
+    <nav>
+        <!-- Contains the website's navigation menu. -->
+        <ul class="navigation">
+            <!-- Defines a list of navigation links. -->
+            <li><a href="index.html">Home</a></li>
+            <!-- Link to the homepage. -->
+            <li><a href="products.html">Our Products</a></li>
+            <!-- Link to the products page. -->
+            <li><a href="petCare.html">Pet Care and Nutrition</a></li>
+            <!-- Link to a pet care and nutrition page. -->
+            <li><a href="about.html">About Us</a></li>
+            <!-- Link to an "About Us" page. -->
+            <li><a href="page1.html">Exclusive Deals</a></li>
+            <!-- Link to a page showcasing exclusive deals. -->
+            <li><a href="index.php">Hello, sign in?</a></li>
+            <!-- Link to a login or sign-in page (PHP backend). -->
+        </ul>
+    </nav>
+</header>
+  <h1>Fetch Data from API</h1>
+  <!-- Main heading of the page introducing the API data fetching functionality. -->
+  <button id="fetchDataBtn">Fetch Data</button>
+  <!-- A button that triggers the data fetching process when clicked. -->
+  <div id="dataContainer"></div>
+  <!-- Placeholder div where the fetched data will be displayed. -->
+
+  <script>
+    // Select the button and container elements for data fetching and display.
+    const fetchDataBtn = document.getElementById('fetchDataBtn');
+    const dataContainer = document.getElementById('dataContainer');
+
+    // Add a click event listener to the fetch button.
+    fetchDataBtn.addEventListener('click', async () => {
+      try {
+        // Make a GET request to the API endpoint.
+        const response = await fetch('/api/data');
+        // Parse the JSON response.
+        const data = await response.json();
+        // Initialize an empty string to build the HTML content.
+        let html = '';
+        // Loop through the data array and generate HTML for each item.
+        data.forEach(item => {
+          html += `<div><h3>${item.name}</h3><p>${item.description}</p></div>`;
+          // Create a div for each item, displaying its name and description.
+        });
+        // Insert the generated HTML into the container div.
+        dataContainer.innerHTML = html;
+      } catch (error) {
+        // Log an error message if the fetch fails.
+        console.error('Error fetching data:', error);
+      }
+    });
+  </script>
+  <!-- JavaScript to handle API data fetching and dynamic content display. -->
+</body>
+</html>
